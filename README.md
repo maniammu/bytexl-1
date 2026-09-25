@@ -10,3 +10,4 @@ live-server --no-browser
 ```
 
 2. Refresh the URL in simple browser to see the output# bytexl-1
+# bytexl-1
