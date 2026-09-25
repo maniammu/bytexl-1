@@ -1,0 +1,234 @@
+:root {
+  --bg-color: #f4f4f6;
+  --purple-main: #7651dc;
+  --purple-light: #dacffc;
+  --yellow-main: #f3d067;
+  --yellow-light: #fef1c7;
+  --peach: #f9eee1;
+  --text-dark: #121212;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Layout Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 375px; /* Mobile width matching screenshot reference */
+  width: 100%;
+}
+
+/* Base Card Styling */
+.card {
+  background-color: var(--white);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation Effect */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Color Variants */
+.card-purple {
+  background-color: var(--purple-main);
+  color: var(--white);
+  text-align: center;
+}
+
+.card-dark-purple {
+  background-color: var(--purple-main);
+  color: var(--white);
+}
+
+.card-light-purple {
+  background-color: var(--purple-light);
+}
+
+.card-yellow {
+  background-color: var(--yellow-main);
+}
+
+.card-peach {
+  background-color: var(--peach);
+}
+
+.card-white {
+  background-color: var(--white);
+}
+
+/* Typography & Details */
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--yellow-main);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.card-purple h3, .card-dark-purple h3 {
+  color: var(--white);
+}
+
+.stars {
+  color: #ffb703;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+/* Specific Component Blocks */
+.social-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tag {
+  background: var(--bg-color);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schedule-box {
+  background: var(--white);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.check-list i {
+  color: var(--purple-main);
+}
+
+/* Animated Bar Chart */
+.chart-box {
+  background: var(--white);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.bar-chart span {
+  flex: 1;
+  background-color: var(--purple-light);
+  border-radius: 4px;
+  transition: height 0.5s ease, background-color 0.3s ease;
+}
+
+.bar-chart span.active, .bar-chart span:hover {
+  background-color: var(--purple-main);
+}
+
+.subtext {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.growth-box {
+  background: var(--white);
+  color: var(--text-dark);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.badge {
+  display: inline-block;
+  background: #e1f7e7;
+  color: #15803d;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.big-stat {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+}
+
+.avatars {
+  display: flex;
+  gap: -8px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+}
+
+/* Button & Interactivity */
+.btn-create {
+  background-color: var(--purple-main);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-create:hover {
+  background-color: #5b3cb4;
+  transform: scale(1.02);
+}
+
+.chat-bubble {
+  background: var(--white);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #444;
+}
